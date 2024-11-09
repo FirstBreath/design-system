@@ -1,0 +1,1 @@
+{"v":5,"entries":{"components-helloworld--default":{"type":"story","id":"components-helloworld--default","name":"Default","title":"Components/HelloWorld","importPath":"./src/components/HelloWorld/HelloWorld.stories.tsx","componentPath":"./src/components/HelloWorld/HelloWorld.component.tsx","tags":["dev","test"]}}}
