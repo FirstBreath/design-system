@@ -2,6 +2,10 @@
   "name": "firstbreath-design-system",
   "version": "1.0.0",
   "main": "index.tsx",
+  "repository": {
+    "url": "https://github.com/FirstBreath/design-system",
+    "type": "git"
+  },
   "files": [
     "dist"
   ],
