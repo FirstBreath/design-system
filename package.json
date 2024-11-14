@@ -2,6 +2,9 @@
   "name": "firstbreath-design-system",
   "version": "1.0.1",
   "main": "index.tsx",
+  "bin": {
+    "fbt": "./src/CLI/newComponent.ts"
+  },
   "repository": {
     "url": "https://github.com/FirstBreath/design-system",
     "type": "git"
