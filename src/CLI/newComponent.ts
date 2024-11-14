@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 import * as fs from 'fs';
 import * as path from 'path';
 import {componentTemplate} from "./templates/template.component";
@@ -5,6 +6,11 @@ import {typesTemplates} from "./templates/template.types";
 import {stylesTemplate} from "./templates/template.styles";
 import {storiesTemplate} from "./templates/template.stories";
 import {testTemplate} from "./templates/template.test";
+
+if (process.argv.includes("--help")) {
+    console.log('Usage: fbt [componentName]');
+    process.exit(0);
+}
 
 const componentName = process.argv[2];
 
@@ -23,12 +29,12 @@ if (fs.existsSync(componentDir)) {
 fs.mkdirSync(componentDir);
 
 const files = [
-    { name: `${componentName}.component.tsx`, content: componentTemplate(componentName) },
-    { name: `${componentName}.types.ts`, content: typesTemplates(componentName) },
-    { name: `${componentName}.styles.ts`, content: stylesTemplate(componentName) },
-    { name: `${componentName}.stories.tsx`, content: storiesTemplate(componentName) },
-    { name: `${componentName}.test.tsx`, content: testTemplate(componentName) },
-    { name: `index.ts`, content: `export * from './${componentName}.component';` },
+    {name: `${componentName}.component.tsx`, content: componentTemplate(componentName)},
+    {name: `${componentName}.types.ts`, content: typesTemplates(componentName)},
+    {name: `${componentName}.styles.ts`, content: stylesTemplate(componentName)},
+    {name: `${componentName}.stories.tsx`, content: storiesTemplate(componentName)},
+    {name: `${componentName}.test.tsx`, content: testTemplate(componentName)},
+    {name: `index.ts`, content: `export * from './${componentName}.component';`},
 ]
 
 try {
