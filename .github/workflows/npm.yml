@@ -1,22 +1,25 @@
 name: Publish Package to npmjs
+
 on:
   push:
     branches:
       - master
+
+env:
+  NPM_REGISTRY: https://registry.npmjs.org
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: ${{ env.REGISTRY_URL }}
       - run: npm ci
-      - run: npm publish --provenance --access public
+      - run: npm publish --provenance --access public --registry $NPM_REGISTRY
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

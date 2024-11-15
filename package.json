@@ -1,5 +1,5 @@
 {
-  "name": "firstbreath-design-system",
+  "name": "@firstbreath/design-system",
   "version": "1.0.1",
   "main": "index.tsx",
   "bin": {
