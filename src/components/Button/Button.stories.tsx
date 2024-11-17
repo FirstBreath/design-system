@@ -9,26 +9,60 @@ export default {
     title: "Components/Button",
     component: Button,
     argTypes: {
-        content: {
-            name: "Content",
-            control: "text"
+        children: {
+            name: "Children",
+            control: "text",
+        },
+        size: {
+            name: "Size",
+            control: "select",
+            options: Object.values(Button.ButtonSize)
         },
         type: {
             name: "Type",
             control: "select",
             options: Object.values(Button.ButtonType)
-        },
-        onClick: {
-            action: "clicked"
         }
     },
 } as Meta;
 
-const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
+const Template: StoryFn<ButtonProps> = (args) => <div style={{
+    display: 'flex',
+}}>
+    <Button {...args} />
+</div>;
+
+export const All: StoryFn<ButtonProps> = (args: ButtonProps) => {
+    const buttons: React.JSX.Element[] = [];
+    Object.values(Button.ButtonType).forEach((type) => {
+        Object.values(Button.ButtonSize).forEach((size) => {
+            buttons.push(<Button type={type} size={size} {...args} />)
+        })
+    })
+    return (
+        <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '8px'
+        }}>
+            {buttons.map((button, index) => (
+                <div key={index}>
+                    {button}
+                </div>
+            ))}
+        </div>
+    );
+}
+
+All.args = {
+    children: 'Button',
+    onClick: () => action('on-click')()
+}
 
 export const Default = Template.bind({});
 Default.args = {
-    content: "Click me",
+    children: 'Button',
     type: Button.ButtonType.PRIMARY,
+    size: Button.ButtonSize.MEDIUM,
     onClick: () => action('on-click')()
 };
