@@ -9,9 +9,9 @@ export const defaultTheme: DefaultTheme = {
         surface: PRIMARY_SWATCH[100],
         error: '#d50101',
         success: '#1ab000',
-        textPrimary: '#262F36',
-        textSecondary: '#808080',
-        border: PRIMARY_SWATCH[200],
+        textPrimary: PRIMARY_SWATCH[900],
+        textSecondary: PRIMARY_SWATCH[700],
+        border: PRIMARY_SWATCH[100],
     },
     typographies: {
         h1: {
