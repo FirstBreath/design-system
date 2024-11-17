@@ -25,6 +25,7 @@ declare module 'styled-components' {
     }
 
     export interface DefaultTheme {
+        primarySwatch: ColorSwatch;
         colors: {
             primary: string;
             secondary: string;
@@ -46,6 +47,7 @@ declare module 'styled-components' {
         borderRadius: '8px';
         spacing: (factor: number) => string;
         sizes: {
+            xsmall: string;
             small: string;
             medium: string;
             large: string;

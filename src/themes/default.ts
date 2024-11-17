@@ -2,6 +2,7 @@ import {DefaultTheme} from "styled-components";
 import {PRIMARY_SWATCH} from "./colors";
 
 export const defaultTheme: DefaultTheme = {
+    primarySwatch: PRIMARY_SWATCH,
     colors: {
         primary: PRIMARY_SWATCH[500],
         secondary: PRIMARY_SWATCH[300],
@@ -54,6 +55,7 @@ export const defaultTheme: DefaultTheme = {
     },
     spacing: (factor: number) => `${factor * 4}px`,
     sizes: {
+        xsmall: '4px',
         small: '8px',
         medium: '16px',
         large: '32px',
