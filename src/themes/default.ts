@@ -1,16 +1,17 @@
 import {DefaultTheme} from "styled-components";
+import {PRIMARY_SWATCH} from "./colors";
 
 export const defaultTheme: DefaultTheme = {
     colors: {
-        primary: '#24669C',
-        secondary: '#91C4ED',
-        background: '#FFFFFF',
-        surface: '#F9F9FB',
+        primary: PRIMARY_SWATCH[500],
+        secondary: PRIMARY_SWATCH[300],
+        background: PRIMARY_SWATCH[50],
+        surface: PRIMARY_SWATCH[100],
         error: '#d50101',
         success: '#1ab000',
         textPrimary: '#262F36',
         textSecondary: '#808080',
-        border: '#D6D6D6',
+        border: PRIMARY_SWATCH[200],
     },
     typographies: {
         h1: {
