@@ -1,23 +1,20 @@
-import React from "react";
-import {fireEvent, screen} from "@testing-library/react";
+import React from 'react';
+import {fireEvent, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import {Button} from "./Button.component";
 import {renderWithTheme} from "../../utils/renderWithTheme";
 
-test('Button component should render content', () => {
-    const content = 'hello there';
-    renderWithTheme(<Button content={content}/>);
+describe('Button Component', () => {
+    test('renders children correctly', () => {
+        renderWithTheme(<Button>Click Me</Button>);
+        expect(screen.getByText('Click Me')).toBeInTheDocument();
+    });
 
-    const contentElement = screen.getByText(content);
-    expect(contentElement).toBeInTheDocument();
-});
-
-test('Button component should trigger onClick event', () => {
-    const handleClick = jest.fn();
-    const content = 'click me';
-    renderWithTheme(<Button content={content} onClick={handleClick}/>);
-
-    const buttonElement = screen.getByText(content);
-    fireEvent.click(buttonElement);
-
-    expect(handleClick).toHaveBeenCalledTimes(1);
+    test('triggers onClick handler when clicked', () => {
+        const handleClick = jest.fn();
+        renderWithTheme(<Button onClick={handleClick}>Click Me</Button>);
+        const buttonElement = screen.getByText('Click Me');
+        fireEvent.click(buttonElement);
+        expect(handleClick).toHaveBeenCalledTimes(1);
+    });
 });
