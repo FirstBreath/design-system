@@ -1,6 +1,6 @@
 import type {Preview} from "@storybook/react";
 import {ThemeProvider} from 'styled-components';
-import {defaultTheme} from "../src/themes/default";
+import {defaultTheme} from "../src";
 import React from "react";
 
 export const decorators = [
@@ -13,6 +13,14 @@ export const decorators = [
 
 const preview: Preview = {
     parameters: {
+        backgrounds: {
+            values: [
+                // 👇 Default values
+                {name: 'Light', value: defaultTheme.colors.background},
+            ],
+            // 👇 Specify which background is shown by default
+            default: 'Light',
+        },
         controls: {
             matchers: {
                 color: /(background|color)$/i,
