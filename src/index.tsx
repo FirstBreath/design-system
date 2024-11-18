@@ -1,3 +1,2 @@
-export const test = () => {
-    console.log('Hello, TypeScript!');
-}
+export * from './components';
+export * from './themes';
