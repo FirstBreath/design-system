@@ -20,7 +20,7 @@ export const Label = styled.label`
     color: ${({theme}) => theme.colors.textPrimary};
 `;
 
-export const Input = styled.input<{ isError?: boolean, isSuccess?: boolean }>`
+export const InputStyle = styled.input<{ isError?: boolean, isSuccess?: boolean }>`
     padding: 16px 8px 8px 8px;
     color: ${({theme}) => theme.colors.textSecondary};
     font-family: ${({theme}) => theme.typographies.p.fontFamily};
@@ -43,4 +43,9 @@ export const Input = styled.input<{ isError?: boolean, isSuccess?: boolean }>`
             }
         }
         };
+`;
+
+export const ErrorMessage = styled.span`
+    color: red;
+    margin-top: 4px;
 `;
