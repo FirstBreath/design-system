@@ -16,7 +16,7 @@ export const Backdrop = styled.div.attrs({'data-testid': 'backdrop'})`
 
 // @ts-ignore
 export const ModalContent = styled.div.attrs({'data-testid': 'modal-content'})`
-    background: ${({theme}) => theme.colors.surface};
+    background: ${({theme}) => theme.colors.background};
     padding: 20px;
     border-radius: ${({theme}) => theme.borderRadius};
     width: 70%;
