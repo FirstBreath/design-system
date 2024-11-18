@@ -33,15 +33,15 @@ const ButtonStylesType = {
 }
 
 const ButtonSizeSmall = css`
-    padding: ${({theme}) => theme.spacing(1)} ${({theme}) => theme.spacing(2)};
+    padding: ${({theme}) => theme.spacing(1)} 16px;
 `;
 
 const ButtonSizeMedium = css`
-    padding: ${({theme}) => theme.spacing(2)} ${({theme}) => theme.spacing(3)};
+    padding: ${({theme}) => theme.spacing(2)} 16px;
 `;
 
 const ButtonSizeLarge = css`
-    padding: ${({theme}) => theme.spacing(3)} ${({theme}) => theme.spacing(4)};
+    padding: ${({theme}) => theme.spacing(3)} 16px;
 `;
 
 const ButtonStylesSize = {
