@@ -1,12 +1,17 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import {screen} from "@testing-library/react";
 import {Card} from "./Card.component";
+import {renderWithTheme} from "../../utils/renderWithTheme";
 
-test('Card component should render content', () => {
-    const content = 'hello there'
-    render(<Card content={content} />)
+describe('Card Component', () => {
+    test('Card component should render content', () => {
+        const content = 'hello there'
+        renderWithTheme(<Card>
+            {content}
+        </Card>)
 
-    const contentElement = screen.getByText(content)
-    expect(contentElement).toBeInTheDocument()
+        const contentElement = screen.getByText(content)
+        expect(contentElement).toBeInTheDocument()
+    })
+
 })
-    
