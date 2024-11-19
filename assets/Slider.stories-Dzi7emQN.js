@@ -1,4 +1,4 @@
-import{R as e}from"./index-DJO9vBfz.js";import{S as s}from"./Slider.component-CEXISF-w.js";import{d as m}from"./styled-components.browser.esm-BjS_sxvV.js";import"./SliderIndicator.component-fSpQ9SOo.js";const f={title:"Components/Slider",component:s},t=m.div`
+import{R as e}from"./index-DJO9vBfz.js";import{S as s}from"./Slider.component-DXAiyUrD.js";import{d as m}from"./styled-components.browser.esm-BjS_sxvV.js";import"./SliderIndicator.component-Clhb9rk-.js";const f={title:"Components/Slider",component:s},t=m.div`
     display: flex;
     flex-direction: column;
     justify-content: center;

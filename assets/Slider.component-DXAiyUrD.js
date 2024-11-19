@@ -1,4 +1,4 @@
-import{R as t}from"./index-DJO9vBfz.js";import{d as a}from"./styled-components.browser.esm-BjS_sxvV.js";import{S as d}from"./SliderIndicator.component-fSpQ9SOo.js";const m=a.div`
+import{R as t}from"./index-DJO9vBfz.js";import{d as a}from"./styled-components.browser.esm-BjS_sxvV.js";import{S as d}from"./SliderIndicator.component-Clhb9rk-.js";const m=a.div`
     display: flex;
     flex-direction: column;
     align-items: center;
