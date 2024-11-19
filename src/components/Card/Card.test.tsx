@@ -13,5 +13,4 @@ describe('Card Component', () => {
         const contentElement = screen.getByText(content)
         expect(contentElement).toBeInTheDocument()
     })
-
 })
