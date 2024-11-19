@@ -11,7 +11,13 @@ export const SliderIndicator = ({
     return (
         <SliderIndicatorContainer>
             {Array.from({length}).map((_, index) => (
-                <SliderIndicatorDot key={index} active={index == activeIndex} onClick={() => onClick(index)}/>
+                <SliderIndicatorDot
+                    key={index}
+                    active={index == activeIndex}
+                    onClick={() => onClick(index)}
+                    data-testid="slider-dot"
+                    data-active={index == activeIndex}
+                />
             ))}
         </SliderIndicatorContainer>
     )
