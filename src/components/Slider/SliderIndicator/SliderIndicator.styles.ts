@@ -6,7 +6,7 @@ export const SliderIndicatorContainer = styled.div`
     gap: 10px;
 `;
 
-export const SliderIndicatorDot = styled.div<{ active: boolean }>`
+export const SliderIndicatorDot = styled.button<{ active: boolean }>`
     width: ${({active}) => active ? '50px' : '30px'};
     height: 5px;
     cursor: ${({active}) => active ? 'default' : 'pointer'};
@@ -14,6 +14,7 @@ export const SliderIndicatorDot = styled.div<{ active: boolean }>`
     box-shadow: ${({theme}) => theme.shadows.default};
     transition-duration: 0.5s;
     background: ${({theme, active}) => active ? theme.colors.primary : theme.colors.surface};
+    border: none;
 
     &:hover {
         background: ${({theme, active}) => active ? theme.colors.primary : theme.colors.secondary};

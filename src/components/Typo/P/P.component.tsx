@@ -2,9 +2,9 @@ import React from 'react';
 import {PProps} from "./P.types";
 import {PStyle} from "./P.styles";
 
-export const P = ({children}: PProps) => {
+export const P = ({children, ...props}: PProps) => {
     return (
-        <PStyle>
+        <PStyle {...props}>
             {children}
         </PStyle>
     )

@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import {ButtonSize, ButtonType} from "./Button.types";
 
 const ButtonStylePrimary = css`
+    border: none;
     background: ${({theme}) => theme.colors.primary};
 
     &:hover {
@@ -10,6 +11,7 @@ const ButtonStylePrimary = css`
 `;
 
 const ButtonStyleSecondary = css`
+    border: none;
     background: ${({theme}) => theme.colors.secondary};
 
     &:hover {
@@ -50,9 +52,11 @@ const ButtonStylesSize = {
     [ButtonSize.LARGE]: ButtonSizeLarge,
 }
 
-export const ButtonStyle = styled.div<{ type: ButtonType, size: ButtonSize }>`
+export const ButtonStyle = styled.button <{ type: ButtonType, size: ButtonSize }>`
     ${({type}) => ButtonStylesType[type]};
     ${({size}) => ButtonStylesSize[size]};
+    transition: all 0.5s;
+    
     border-radius: 8px;
     cursor: pointer;
     box-shadow: ${({theme}) => theme.shadows.default};

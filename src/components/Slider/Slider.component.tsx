@@ -3,13 +3,13 @@ import {SliderProps} from "./Slider.types";
 import {SliderContainer, SliderElement, SliderElementsContainer} from "./Slider.styles";
 import {SliderIndicator} from "./SliderIndicator";
 
-export const Slider = ({elements}: SliderProps) => {
+export const Slider = ({elements, ...props}: SliderProps) => {
     const isPairLength = elements.length % 2 === 0
     const middle = Math.floor(elements.length / 2);
 
     const [activeIndex, setActiveIndex] = React.useState(middle);
     return (
-        <SliderContainer>
+        <SliderContainer {...props}>
             <SliderElementsContainer length={isPairLength ? elements.length + 1 : elements.length}>
                 {elements.map((element, index) => <SliderElement
                     key={index}
