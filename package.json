@@ -68,5 +68,9 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "styled-components": "^6.1.13"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^8.4.5",
+    "@storybook/addon-storysource": "^8.4.5"
   }
 }
