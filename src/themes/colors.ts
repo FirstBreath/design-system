@@ -1,7 +1,7 @@
 import {ColorSwatch} from "styled-components";
 
 export const PRIMARY_SWATCH: ColorSwatch = {
-    50: "#e9f0f5",
+    50: "#ffffff",
     100: "#d5dade",
     200: "#aab4bd",
     300: "#808f9b",
