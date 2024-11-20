@@ -7,9 +7,11 @@ const ButtonComponent = ({
                              type = ButtonType.PRIMARY,
                              size = ButtonSize.MEDIUM,
                              onClick,
+                             ...props
                          }: ButtonProps) => {
     return (
         <ButtonStyle
+            {...props}
             type={type}
             size={size}
             onClick={onClick}

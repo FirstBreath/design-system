@@ -2,8 +2,7 @@ import React from 'react';
 import {InputsProps} from "./Inputs.types";
 import {ErrorMessage, InputStyle, InputWrapper, Label} from "./Inputs.styles";
 
-
-export const Input: React.FC<InputsProps> = ({label, placeholder, onChange, type, validate}) => {
+export const Input: React.FC<InputsProps> = ({label, placeholder, onChange, type, validate, ...props}) => {
     const [value, setValue] = React.useState('');
     const [error, setError] = React.useState<string | null>(null);
 
@@ -19,7 +18,7 @@ export const Input: React.FC<InputsProps> = ({label, placeholder, onChange, type
     };
 
     return (
-        <InputWrapper>
+        <InputWrapper {...props}>
             <Label>{label}</Label>
             <InputStyle
                 placeholder={placeholder}

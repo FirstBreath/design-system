@@ -32,6 +32,8 @@ export const InputStyle = styled.input<{ isError?: boolean, isSuccess?: boolean 
     outline: none;
     box-shadow: ${({theme}) => theme.shadows.default};
 
+    transition: border-color 0.5s;
+
     &:focus {
         border-color: ${({theme, isSuccess, isError}) => {
             if (isSuccess) {

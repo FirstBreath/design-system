@@ -6,10 +6,11 @@ export const SliderIndicator = ({
                                     length,
                                     activeIndex,
                                     onClick = () => {
-                                    }
+                                    },
+                                    ...props
                                 }: SliderIndicatorProps) => {
     return (
-        <SliderIndicatorContainer>
+        <SliderIndicatorContainer {...props}>
             {Array.from({length}).map((_, index) => (
                 <SliderIndicatorDot
                     key={index}

@@ -7,9 +7,11 @@ const BadgeComponent = ({
                             type = BadgeTypes.BADGE,
                             color = BadgeColors.PRIMARY,
                             size = BadgeSizes.MEDIUM,
+                            ...props
                         }: BadgeProps) => {
     return (
         <BadgeStyle
+            {...props}
             size={size}
             type={type}
             color={color}
