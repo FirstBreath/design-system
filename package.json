@@ -1,10 +1,17 @@
 {
   "name": "@firstbreath/design-system",
-  "version": "1.1.1",
-  "main": "index.tsx",
+  "version": "1.1.7",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "fbt": "./src/CLI/newComponent.ts"
   },
+  "keywords": [
+    "design-system",
+    "styled-components",
+    "react",
+    "typescript"
+  ],
   "repository": {
     "url": "https://github.com/FirstBreath/design-system",
     "type": "git"
@@ -14,8 +21,8 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -23,7 +30,8 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "new-component": "ts-node ./src/CLI/newComponent.ts"
+    "new-component": "ts-node ./src/CLI/newComponent.ts",
+    "deploy": "npm run build && npm publish --access public"
   },
   "author": "",
   "license": "ISC",
