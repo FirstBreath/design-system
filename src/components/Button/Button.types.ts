@@ -13,8 +13,12 @@ export enum ButtonSize {
 }
 
 export interface ButtonProps {
+    /** The content of the button */
     children: React.ReactNode | string;
+    /** The type of the button */
     type?: ButtonType;
+    /** The size of the button */
     size?: ButtonSize;
+    /** The click event handler */
     onClick?: () => void;
 }

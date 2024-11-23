@@ -8,6 +8,13 @@ import {H3} from "./H3";
 
 export default {
     title: "Components/Typo",
+    subcomponents: {
+        H1,
+        H2,
+        H3,
+        P,
+        Small,
+    },
     argTypes: {
         children: {
             control: "text",

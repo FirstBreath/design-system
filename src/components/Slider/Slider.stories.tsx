@@ -3,9 +3,11 @@ import {Meta, StoryFn} from "@storybook/react";
 import {Slider} from "./Slider.component";
 import {SliderProps} from "./Slider.types";
 import styled from "styled-components";
+import {SliderIndicator} from "./SliderIndicator";
 
 export default {
     title: "Components/Slider",
+    subcomponents: {SliderIndicator},
     component: Slider,
 } as Meta;
 

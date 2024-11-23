@@ -12,6 +12,7 @@ export const decorators = [
 ];
 
 const preview: Preview = {
+    tags: ['autodocs'],
     parameters: {
         backgrounds: {
             values: [

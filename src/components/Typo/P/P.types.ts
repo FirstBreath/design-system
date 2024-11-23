@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Props for the P component
+ */
 export interface PProps {
-    children: string | React.ReactNode;
+    /** The content to be displayed inside the P element */
+    children: React.ReactNode;
 }

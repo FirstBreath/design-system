@@ -2,13 +2,21 @@ import React from 'react';
 import {SliderIndicatorProps} from "./SliderIndicator.types";
 import {SliderIndicatorContainer, SliderIndicatorDot} from "./SliderIndicator.styles";
 
-export const SliderIndicator = ({
-                                    length,
-                                    activeIndex,
-                                    onClick = () => {
-                                    },
-                                    ...props
-                                }: SliderIndicatorProps) => {
+/**
+ * SliderIndicator component
+ * @param {number} length - The number of dots to display
+ * @param {number} activeIndex - The index of the currently active dot
+ * @param {function} onClick - The function to call when a dot is clicked
+ * @param {object} props - The rest of the props
+ * @returns {JSX.Element} The rendered slider indicator component
+ */
+export const SliderIndicator: React.FC<SliderIndicatorProps> = ({
+                                                                    length,
+                                                                    activeIndex,
+                                                                    onClick = () => {
+                                                                    },
+                                                                    ...props
+                                                                }: SliderIndicatorProps): JSX.Element => {
     return (
         <SliderIndicatorContainer {...props}>
             {Array.from({length}).map((_, index) => (
@@ -21,5 +29,5 @@ export const SliderIndicator = ({
                 />
             ))}
         </SliderIndicatorContainer>
-    )
-}
+    );
+};

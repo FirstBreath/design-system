@@ -2,6 +2,16 @@ import React from 'react';
 import {InputsProps} from "./Inputs.types";
 import {ErrorMessage, InputStyle, InputWrapper, Label} from "./Inputs.styles";
 
+/**
+ * Input component
+ * @param {string} label - The label for the input field
+ * @param {string} placeholder - The placeholder text for the input field
+ * @param {function} onChange - The change event handler
+ * @param {string} type - The type of the input field
+ * @param {function} validate - The validation function for the input field
+ * @param {object} props - The rest of the props
+ * @returns {JSX.Element} The rendered input component
+ */
 export const Input: React.FC<InputsProps> = ({label, placeholder, onChange, type, validate, ...props}) => {
     const [value, setValue] = React.useState('');
     const [error, setError] = React.useState<string | null>(null);
