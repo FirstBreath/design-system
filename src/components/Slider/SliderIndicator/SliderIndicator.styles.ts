@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SliderIndicatorContainer = styled.div`
     display: flex;
@@ -7,17 +7,18 @@ export const SliderIndicatorContainer = styled.div`
 `;
 
 export const SliderIndicatorDot = styled.button<{ active: boolean }>`
-    width: ${({active}) => active ? '50px' : '30px'};
+    width: ${({ active }) => (active ? '50px' : '30px')};
     height: 5px;
-    cursor: ${({active}) => active ? 'default' : 'pointer'};
-    border-radius: ${({theme}) => theme.borderRadius};
-    box-shadow: ${({theme}) => theme.shadows.default};
+    cursor: ${({ active }) => (active ? 'default' : 'pointer')};
+    border-radius: ${({ theme }) => theme.borderRadius};
+    box-shadow: ${({ theme }) => theme.shadows.default};
     transition-duration: 0.5s;
-    background: ${({theme, active}) => active ? theme.colors.primary : theme.colors.surface};
+    background: ${({ theme, active }) =>
+        active ? theme.colors.primary : theme.colors.surface};
     border: none;
 
     &:hover {
-        background: ${({theme, active}) => active ? theme.colors.primary : theme.colors.secondary};
+        background: ${({ theme, active }) =>
+            active ? theme.colors.primary : theme.colors.secondary};
     }
-
 `;

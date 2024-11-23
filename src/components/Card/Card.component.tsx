@@ -1,6 +1,6 @@
 import React from 'react';
-import {CardProps} from "./Card.types";
-import {CardStyle} from "./Card.styles";
+import { CardProps } from './Card.types';
+import { CardStyle } from './Card.styles';
 
 /**
  * Card component
@@ -8,10 +8,9 @@ import {CardStyle} from "./Card.styles";
  * @param {object} props - The rest of the props
  * @returns {JSX.Element} The rendered card component
  */
-export const Card: React.FC<CardProps> = ({children, ...props}: CardProps): JSX.Element => {
-    return (
-        <CardStyle {...props}>
-            {children}
-        </CardStyle>
-    )
-}
+export const Card: React.FC<CardProps> = ({
+    children,
+    ...props
+}: CardProps): JSX.Element => {
+    return <CardStyle {...props}>{children}</CardStyle>;
+};

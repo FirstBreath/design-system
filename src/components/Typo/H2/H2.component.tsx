@@ -1,6 +1,6 @@
 import React from 'react';
-import {H2Props} from "./H2.types";
-import {H2Style} from "./H2.styles";
+import { H2Props } from './H2.types';
+import { H2Style } from './H2.styles';
 
 /**
  * H2 component
@@ -8,10 +8,9 @@ import {H2Style} from "./H2.styles";
  * @param {object} props - The rest of the props
  * @returns {JSX.Element} The rendered H2 component
  */
-export const H2: React.FC<H2Props> = ({children, ...props}: H2Props): JSX.Element => {
-    return (
-        <H2Style {...props}>
-            {children}
-        </H2Style>
-    );
+export const H2: React.FC<H2Props> = ({
+    children,
+    ...props
+}: H2Props): JSX.Element => {
+    return <H2Style {...props}>{children}</H2Style>;
 };

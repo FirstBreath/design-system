@@ -10,5 +10,5 @@ test('${componentName} component should render content', () => {
     const contentElement = screen.getByText(content)
     expect(contentElement).toBeInTheDocument()
 })
-    `
-}
+    `;
+};

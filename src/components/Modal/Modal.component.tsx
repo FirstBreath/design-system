@@ -1,6 +1,6 @@
 import React from 'react';
-import {ModalProps} from "./Modal.types";
-import {Backdrop, CloseButton, ModalContent} from "./Modal.styles";
+import { ModalProps } from './Modal.types';
+import { Backdrop, CloseButton, ModalContent } from './Modal.styles';
 
 /**
  * Modal component
@@ -10,7 +10,12 @@ import {Backdrop, CloseButton, ModalContent} from "./Modal.styles";
  * @param {object} props - The rest of the props
  * @returns {JSX.Element | null} The rendered modal component or null if not open
  */
-export const Modal: React.FC<ModalProps> = ({isOpen, onClose, children, ...props}: ModalProps): JSX.Element | null => {
+export const Modal: React.FC<ModalProps> = ({
+    isOpen,
+    onClose,
+    children,
+    ...props
+}: ModalProps): JSX.Element | null => {
     if (!isOpen) {
         return null;
     }

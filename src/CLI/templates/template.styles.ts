@@ -4,5 +4,5 @@ export const stylesTemplate = (componentName: string) => {
 export const ${componentName}Style = styled.div\`
     color: red;
 \`;
-`
-}
+`;
+};

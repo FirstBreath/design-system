@@ -1,6 +1,6 @@
 import React from 'react';
-import {SmallProps} from "./Small.types";
-import {SmallStyle} from "./Small.styles";
+import { SmallProps } from './Small.types';
+import { SmallStyle } from './Small.styles';
 
 /**
  * Small component
@@ -8,10 +8,9 @@ import {SmallStyle} from "./Small.styles";
  * @param {object} props - The rest of the props
  * @returns {JSX.Element} The rendered Small component
  */
-export const Small: React.FC<SmallProps> = ({children, ...props}: SmallProps): JSX.Element => {
-    return (
-        <SmallStyle {...props}>
-            {children}
-        </SmallStyle>
-    );
+export const Small: React.FC<SmallProps> = ({
+    children,
+    ...props
+}: SmallProps): JSX.Element => {
+    return <SmallStyle {...props}>{children}</SmallStyle>;
 };

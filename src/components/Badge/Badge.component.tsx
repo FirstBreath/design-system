@@ -1,6 +1,6 @@
 import React from 'react';
-import {BadgeColors, BadgeProps, BadgeSizes, BadgeTypes} from "./Badge.types";
-import {BadgeStyle} from "./Badge.styles";
+import { BadgeColors, BadgeProps, BadgeSizes, BadgeTypes } from './Badge.types';
+import { BadgeStyle } from './Badge.styles';
 
 /**
  * Badge component
@@ -12,19 +12,14 @@ import {BadgeStyle} from "./Badge.styles";
  * @returns {JSX.Element} The rendered badge component
  */
 const BadgeComponent: React.FC<BadgeProps> = ({
-                                                  children,
-                                                  type = BadgeTypes.BADGE,
-                                                  color = BadgeColors.PRIMARY,
-                                                  size = BadgeSizes.MEDIUM,
-                                                  ...props
-                                              }: BadgeProps): JSX.Element => {
+    children,
+    type = BadgeTypes.BADGE,
+    color = BadgeColors.PRIMARY,
+    size = BadgeSizes.MEDIUM,
+    ...props
+}: BadgeProps): JSX.Element => {
     return (
-        <BadgeStyle
-            {...props}
-            size={size}
-            type={type}
-            color={color}
-        >
+        <BadgeStyle {...props} size={size} type={type} color={color}>
             {children}
         </BadgeStyle>
     );

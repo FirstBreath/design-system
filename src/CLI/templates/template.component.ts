@@ -10,5 +10,5 @@ export const ${componentName} = ({ content }: ${componentName}Props) => {
         </${componentName}Style>
     )
 }
-`
-}
+`;
+};

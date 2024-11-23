@@ -1,13 +1,13 @@
-import React from "react";
-import {Meta} from "@storybook/react";
-import {Modal} from "./Modal.component";
-import {Button} from "../Button";
+import React from 'react';
+import { Meta } from '@storybook/react';
+import { Modal } from './Modal.component';
+import { Button } from '../Button';
 
 export default {
-    title: "Components/Modal",
+    title: 'Components/Modal',
     component: Modal,
     argTypes: {
-        content: {control: "text"},
+        content: { control: 'text' },
     },
 } as Meta;
 
@@ -19,9 +19,11 @@ export const Default = () => {
     };
 
     return (
-        <div style={{
-            display: 'flex'
-        }}>
+        <div
+            style={{
+                display: 'flex',
+            }}
+        >
             <Button onClick={toggleModal}>Open Modal</Button>
             <Modal isOpen={isOpen} onClose={toggleModal}>
                 <h2>Hello, World!</h2>

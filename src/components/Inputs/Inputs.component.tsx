@@ -1,6 +1,6 @@
 import React from 'react';
-import {InputsProps} from "./Inputs.types";
-import {ErrorMessage, InputStyle, InputWrapper, Label} from "./Inputs.styles";
+import { InputsProps } from './Inputs.types';
+import { ErrorMessage, InputStyle, InputWrapper, Label } from './Inputs.styles';
 
 /**
  * Input component
@@ -12,7 +12,14 @@ import {ErrorMessage, InputStyle, InputWrapper, Label} from "./Inputs.styles";
  * @param {object} props - The rest of the props
  * @returns {JSX.Element} The rendered input component
  */
-export const Input: React.FC<InputsProps> = ({label, placeholder, onChange, type, validate, ...props}) => {
+export const Input: React.FC<InputsProps> = ({
+    label,
+    placeholder,
+    onChange,
+    type,
+    validate,
+    ...props
+}) => {
     const [value, setValue] = React.useState('');
     const [error, setError] = React.useState<string | null>(null);
 

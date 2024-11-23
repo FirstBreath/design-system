@@ -1,6 +1,6 @@
 import React from 'react';
-import {ButtonProps, ButtonSize, ButtonType} from "./Button.types";
-import {ButtonStyle, ButtonText} from "./Button.styles";
+import { ButtonProps, ButtonSize, ButtonType } from './Button.types';
+import { ButtonStyle, ButtonText } from './Button.styles';
 
 /**
  * Button component
@@ -12,26 +12,20 @@ import {ButtonStyle, ButtonText} from "./Button.styles";
  * @returns {JSX.Element} The rendered button component
  */
 const ButtonComponent: React.FC<ButtonProps> = ({
-                                                    children,
-                                                    type = ButtonType.PRIMARY,
-                                                    size = ButtonSize.MEDIUM,
-                                                    onClick,
-                                                    ...props
-                                                }: ButtonProps): JSX.Element => {
+    children,
+    type = ButtonType.PRIMARY,
+    size = ButtonSize.MEDIUM,
+    onClick,
+    ...props
+}: ButtonProps): JSX.Element => {
     return (
-        <ButtonStyle
-            {...props}
-            type={type}
-            size={size}
-            onClick={onClick}
-        >
-            <ButtonText
-                type={type}
-                size={size}
-            >{children}</ButtonText>
+        <ButtonStyle {...props} type={type} size={size} onClick={onClick}>
+            <ButtonText type={type} size={size}>
+                {children}
+            </ButtonText>
         </ButtonStyle>
-    )
-}
+    );
+};
 
 export const Button = Object.assign(ButtonComponent, {
     ButtonType,

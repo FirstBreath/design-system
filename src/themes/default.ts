@@ -1,5 +1,5 @@
-import {DefaultTheme} from "styled-components";
-import {PRIMARY_SWATCH} from "./colors";
+import { DefaultTheme } from 'styled-components';
+import { PRIMARY_SWATCH } from './colors';
 
 export const defaultTheme: DefaultTheme = {
     primarySwatch: PRIMARY_SWATCH,

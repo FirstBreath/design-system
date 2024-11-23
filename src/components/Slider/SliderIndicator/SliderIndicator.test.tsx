@@ -1,8 +1,8 @@
-import React from "react";
-import {fireEvent, screen} from "@testing-library/react";
-import {SliderIndicator} from "./SliderIndicator.component";
-import {SliderIndicatorProps} from "./SliderIndicator.types";
-import {renderWithTheme} from "../../../utils/renderWithTheme";
+import React from 'react';
+import { fireEvent, screen } from '@testing-library/react';
+import { SliderIndicator } from './SliderIndicator.component';
+import { SliderIndicatorProps } from './SliderIndicator.types';
+import { renderWithTheme } from '../../../utils/renderWithTheme';
 
 describe('SliderIndicator Component', () => {
     const defaultProps: SliderIndicatorProps = {
@@ -35,5 +35,4 @@ describe('SliderIndicator Component', () => {
         fireEvent.click(dots[1]);
         expect(defaultProps.onClick).toHaveBeenCalledWith(1);
     });
-
 });

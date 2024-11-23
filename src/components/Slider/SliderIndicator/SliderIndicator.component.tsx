@@ -1,6 +1,9 @@
 import React from 'react';
-import {SliderIndicatorProps} from "./SliderIndicator.types";
-import {SliderIndicatorContainer, SliderIndicatorDot} from "./SliderIndicator.styles";
+import { SliderIndicatorProps } from './SliderIndicator.types';
+import {
+    SliderIndicatorContainer,
+    SliderIndicatorDot,
+} from './SliderIndicator.styles';
 
 /**
  * SliderIndicator component
@@ -11,15 +14,14 @@ import {SliderIndicatorContainer, SliderIndicatorDot} from "./SliderIndicator.st
  * @returns {JSX.Element} The rendered slider indicator component
  */
 export const SliderIndicator: React.FC<SliderIndicatorProps> = ({
-                                                                    length,
-                                                                    activeIndex,
-                                                                    onClick = () => {
-                                                                    },
-                                                                    ...props
-                                                                }: SliderIndicatorProps): JSX.Element => {
+    length,
+    activeIndex,
+    onClick = () => {},
+    ...props
+}: SliderIndicatorProps): JSX.Element => {
     return (
         <SliderIndicatorContainer {...props}>
-            {Array.from({length}).map((_, index) => (
+            {Array.from({ length }).map((_, index) => (
                 <SliderIndicatorDot
                     key={index}
                     active={index == activeIndex}

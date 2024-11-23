@@ -7,10 +7,9 @@ type typography = {
     fontStyle: string;
     lineHeight: string;
     letterSpacing?: string;
-}
+};
 
 declare module 'styled-components' {
-
     export type ColorSwatch = {
         50: string;
         100: string;
@@ -22,7 +21,7 @@ declare module 'styled-components' {
         700: string;
         800: string;
         900: string;
-    }
+    };
 
     export interface DefaultTheme {
         primarySwatch: ColorSwatch;
@@ -36,7 +35,7 @@ declare module 'styled-components' {
             textPrimary: string;
             textSecondary: string;
             border: string;
-        }
+        };
         typographies: {
             h1: typography;
             h2: typography;
@@ -52,12 +51,11 @@ declare module 'styled-components' {
             medium: string;
             large: string;
             xlarge: string;
-        },
+        };
         shadows: {
             default: string;
             medium: string;
             large: string;
-        },
+        };
     }
-
 }

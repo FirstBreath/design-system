@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SliderContainer = styled.div`
     display: flex;
@@ -19,7 +19,7 @@ export const SliderElementsContainer = styled.div<{ length: number }>`
 `;
 
 export const SliderElement = styled.div<{ translate: string }>`
-    transform: translateX(${({translate}) => translate});
+    transform: translateX(${({ translate }) => translate});
     transition: transform 0.5s ease;
     width: 100%;
 `;

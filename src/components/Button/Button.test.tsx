@@ -1,8 +1,8 @@
 import React from 'react';
-import {fireEvent, screen} from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {Button} from "./Button.component";
-import {renderWithTheme} from "../../utils/renderWithTheme";
+import { Button } from './Button.component';
+import { renderWithTheme } from '../../utils/renderWithTheme';
 
 describe('Button Component', () => {
     test('renders children correctly', () => {

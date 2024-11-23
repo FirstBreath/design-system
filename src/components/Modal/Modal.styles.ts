@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-// @ts-ignore
-export const Backdrop = styled.div.attrs({'data-testid': 'backdrop'})`
+export const Backdrop = styled.div`
     position: fixed;
     top: 0;
     left: 0;
@@ -14,14 +13,13 @@ export const Backdrop = styled.div.attrs({'data-testid': 'backdrop'})`
     z-index: 1000;
 `;
 
-// @ts-ignore
-export const ModalContent = styled.div.attrs({'data-testid': 'modal-content'})`
-    background: ${({theme}) => theme.colors.background};
+export const ModalContent = styled.div`
+    background: ${({ theme }) => theme.colors.background};
     padding: 20px;
-    border-radius: ${({theme}) => theme.borderRadius};
+    border-radius: ${({ theme }) => theme.borderRadius};
     width: 70%;
     position: relative;
-    border: 1px solid ${({theme}) => theme.colors.border};
+    border: 1px solid ${({ theme }) => theme.colors.border};
 
     // media queries to phone set width to 100%
     @media (max-width: 600px) {
