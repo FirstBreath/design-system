@@ -6,14 +6,14 @@ import {CardProps} from "./Card.types";
 export default {
     title: "Components/Card",
     component: Card,
-    argTypes: {
-        children: {control: "text"},
-    },
+    parameters: {
+        layout: 'centered',
+    }
 } as Meta;
 
 const Template: StoryFn<CardProps> = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    children: "Hello, World!",
+    children: "Default Card",
 };

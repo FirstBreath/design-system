@@ -19,8 +19,12 @@ export enum BadgeColors {
 }
 
 export interface BadgeProps {
+    /** The content of the badge */
     children: React.ReactNode | string;
+    /** The type of the badge */
     type?: BadgeTypes;
+    /** The color of the badge */
     size?: BadgeSizes;
+    /** The size of the badge */
     color?: BadgeColors;
 }

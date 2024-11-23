@@ -10,10 +10,20 @@ const config: StorybookConfig = {
         "@storybook/addon-actions",
         '@storybook/addon-storysource',
         '@storybook/addon-a11y',
+        '@storybook/addon-docs',
     ],
+    typescript: {
+        reactDocgen: "react-docgen-typescript",
+        reactDocgenTypescriptOptions: {
+            shouldExtractLiteralValuesFromEnum: true,
+            propFilter: (prop) =>
+                prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+        },
+    },
     framework: {
         name: "@storybook/react-vite",
         options: {},
     },
 };
+
 export default config;
