@@ -1,1 +1,1 @@
-export * from './P.component';
+export * from './P.styles';

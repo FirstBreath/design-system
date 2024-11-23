@@ -1,1 +1,1 @@
-export * from './H3.component';
+export * from './H3.styles';

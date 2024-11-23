@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const CardStyle = styled.div`
+/**
+ * Styled component for Card
+ * @returns {JSX.Element} The styled Card component
+ */
+export const Card = styled.div`
     padding: 24px;
     gap: 40px;
 

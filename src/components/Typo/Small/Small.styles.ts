@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const SmallStyle = styled.span`
+/**
+ * Styled component for Small (span) element
+ * @returns {JSX.Element} The styled Small component
+ */
+export const Small = styled.span`
     font-family: ${({theme}) => theme.typographies.small.fontFamily};
     font-size: ${({theme}) => theme.typographies.small.fontSize};
     font-weight: ${({theme}) => theme.typographies.small.fontWeight};

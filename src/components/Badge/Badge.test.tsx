@@ -1,7 +1,7 @@
 import React from 'react';
 import {screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {Badge} from './Badge.component';
+import {Badge} from './Badge.styles';
 import {BadgeColors, BadgeSizes, BadgeTypes} from './Badge.types';
 import {defaultTheme} from "../../themes";
 import {renderWithTheme} from "../../utils/renderWithTheme";

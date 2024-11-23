@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import {PProps} from "./P.types";
 
-export const PStyle = styled.p`
+/**
+ * Styled component for P (paragraph) element
+ * @returns {JSX.Element} The styled P component
+ */
+export const P = styled.p<PProps>`
     font-family: ${({theme}) => theme.typographies.p.fontFamily};
     font-size: ${({theme}) => theme.typographies.p.fontSize};
     font-weight: ${({theme}) => theme.typographies.p.fontWeight};

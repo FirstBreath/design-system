@@ -1,6 +1,6 @@
 import React from "react";
 import {render, screen} from "@testing-library/react";
-import {H1} from "./H1.component";
+import {H1} from "./H1.styles";
 
 test('H1 component should render content', () => {
     const content = 'hello there'

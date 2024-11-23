@@ -1,6 +1,6 @@
 import React from "react";
 import {Meta, StoryFn} from "@storybook/react";
-import {H1} from "./H1.component";
+import {H1} from "./H1.styles";
 import {H1Props} from "./H1.types";
 
 export default {

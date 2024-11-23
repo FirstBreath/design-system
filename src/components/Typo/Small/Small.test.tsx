@@ -1,6 +1,6 @@
 import React from "react";
 import {render, screen} from "@testing-library/react";
-import {Small} from "./Small.component";
+import {Small} from "./Small.styles";
 
 test('Small component should render content', () => {
     const content = 'hello there'

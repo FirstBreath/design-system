@@ -1,6 +1,9 @@
 import styled, {css} from "styled-components";
-import {BadgeColors, BadgeSizes, BadgeTypes} from "./Badge.types";
+import {BadgeColors, BadgeProps, BadgeSizes, BadgeTypes} from "./Badge.types";
 
+/**
+ * CSS styles for different badge colors
+ */
 const Colors = {
     [BadgeColors.PRIMARY]: css`
         background: ${({theme}) => theme.colors.primary};
@@ -16,6 +19,9 @@ const Colors = {
     `,
 }
 
+/**
+ * CSS styles for different badge types
+ */
 const Types = {
     [BadgeTypes.BADGE]: css`
         border-radius: ${({theme}) => theme.borderRadius};
@@ -25,6 +31,9 @@ const Types = {
     `,
 }
 
+/**
+ * CSS styles for different badge sizes
+ */
 const Sizes = {
     [BadgeSizes.SMALL]: css`
         padding: ${({theme}) => theme.spacing(1)} ${({theme}) => theme.spacing(2)};
@@ -37,10 +46,15 @@ const Sizes = {
     `,
 }
 
-export const BadgeStyle = styled.div<{ type: BadgeTypes, size: BadgeSizes, color: BadgeColors }>`
-    ${({color}) => Colors[color]};
-    ${({type}) => Types[type]};
-    ${({size}) => Sizes[size]};
+/**
+ * Styled component for Badge
+ * @param {BadgeProps} props - The props for the Badge component
+ * @returns {JSX.Element} The styled Badge component
+ */
+export const Badge = styled.div<BadgeProps>`
+    ${({color}) => Colors[color ?? BadgeColors.PRIMARY]};
+    ${({type}) => Types[type ?? BadgeTypes.BADGE]};
+    ${({size}) => Sizes[size ?? BadgeSizes.MEDIUM]};
 
     color: ${({theme}) => theme.colors.background};
     text-align: center;

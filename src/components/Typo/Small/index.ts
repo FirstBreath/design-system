@@ -1,1 +1,1 @@
-export * from './Small.component';
+export * from './Small.styles';

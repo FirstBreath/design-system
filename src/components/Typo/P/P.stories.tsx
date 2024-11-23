@@ -1,6 +1,6 @@
 import React from "react";
 import {Meta, StoryFn} from "@storybook/react";
-import {P} from "./P.component";
+import {P} from "./P.styles";
 import {PProps} from "./P.types";
 
 export default {

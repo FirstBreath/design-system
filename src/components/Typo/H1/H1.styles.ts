@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import {H1Props} from "./H1.types";
 
-export const H1Style = styled.h1`
+/**
+ * Styled component for H1 element
+ * @returns {JSX.Element} The styled H1 component
+ */
+export const H1 = styled.h1<H1Props>`
     font-family: ${({theme}) => theme.typographies.h1.fontFamily};
     font-size: ${({theme}) => theme.typographies.h1.fontSize};
     font-weight: ${({theme}) => theme.typographies.h1.fontWeight};
