@@ -1,0 +1,6 @@
+import{R as e}from"./index-B-o1Wr-g.js";import{S as a}from"./Slider.component-BKjvkFfy.js";import{d as m}from"./styled-components.browser.esm-sghPJsyo.js";import{S as c}from"./SliderIndicator.component-CrC7ycyZ.js";import"./_commonjsHelpers-Cpj98o6Y.js";const h={title:"Components/Slider",subcomponents:{SliderIndicator:c},component:a},t=m.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`,o=[e.createElement(t,null,e.createElement("h1",null,"test1"),e.createElement("p",null,"test1 p")),e.createElement(t,null,e.createElement("h1",null,"test2"),e.createElement("p",null,"test2 p")),e.createElement(t,null,e.createElement("h1",null,"test3"),e.createElement("p",null,"test3 p")),e.createElement(t,null,e.createElement("h1",null,"test4"),e.createElement("p",null,"test4 p")),e.createElement(t,null,e.createElement("h1",null,"test5"),e.createElement("p",null,"test5 p")),e.createElement(t,null,e.createElement("h1",null,"test5"),e.createElement("p",null,"test5 p"))],p=u=>e.createElement(a,{elements:o}),l=p.bind({});var n,r,s;l.parameters={...l.parameters,docs:{...(n=l.parameters)==null?void 0:n.docs,source:{originalSource:"args => <Slider elements={elements} />",...(s=(r=l.parameters)==null?void 0:r.docs)==null?void 0:s.source}}};const x=["Default"];export{l as Default,x as __namedExportsOrder,h as default};
