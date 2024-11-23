@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import {H2Props} from "./H2.types";
 
-export const H2Style = styled.h2`
+/**
+ * Styled component for H2 element
+ * @returns {JSX.Element} The styled H2 component
+ */
+export const H2 = styled.h2<H2Props>`
     font-family: ${({theme}) => theme.typographies.h2.fontFamily};
     font-size: ${({theme}) => theme.typographies.h2.fontSize};
     font-weight: ${({theme}) => theme.typographies.h2.fontWeight};

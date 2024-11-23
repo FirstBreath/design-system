@@ -1,6 +1,6 @@
 import React from "react";
 import {Meta, StoryFn} from "@storybook/react";
-import {Small} from "./Small.component";
+import {Small} from "./Small.styles";
 import {SmallProps} from "./Small.types";
 
 export default {
