@@ -1,5 +1,5 @@
-import {DefaultTheme} from "styled-components";
-import {PRIMARY_SWATCH} from "./colors";
+import { DefaultTheme } from 'styled-components';
+import { PRIMARY_SWATCH } from './colors';
 
 export const defaultTheme: DefaultTheme = {
     primarySwatch: PRIMARY_SWATCH,
@@ -63,7 +63,7 @@ export const defaultTheme: DefaultTheme = {
     },
     borderRadius: '8px',
     shadows: {
-        default: '0px 1px 2px 0px rgba(16, 24, 40, 0.05)',
+        default: '4px 4px 10px 0px rgba(0, 0, 0, 0.05)',
         medium: '5px 5px 10px -3px rgba(16, 24, 40, 0.05)',
         large: '15px 15px 25px 0px rgba(16, 24, 40, 0.05)',
     },

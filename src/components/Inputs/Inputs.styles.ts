@@ -1,41 +1,44 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const InputWrapper = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 4px;
+    width: 100%;
 `;
 
 export const Label = styled.label`
     position: absolute;
     top: -8px;
     left: 12px;
-    background: ${({theme}) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.background};
     padding: 0 4px;
-    font-size: ${({theme}) => theme.typographies.p.fontSize};
-    font-family: ${({theme}) => theme.typographies.p.fontFamily};
-    font-weight: ${({theme}) => theme.typographies.p.fontWeight};
+    font-size: ${({ theme }) => theme.typographies.p.fontSize};
+    font-family: ${({ theme }) => theme.typographies.p.fontFamily};
+    font-weight: ${({ theme }) => theme.typographies.p.fontWeight};
     transition: 0.3s;
-    color: ${({theme}) => theme.colors.textPrimary};
+    color: ${({ theme }) => theme.colors.textPrimary};
 `;
 
 export const InputStyle = styled.input<{ isError?: boolean, isSuccess?: boolean }>`
     padding: 16px 8px 8px 8px;
-    color: ${({theme}) => theme.colors.textSecondary};
-    font-family: ${({theme}) => theme.typographies.p.fontFamily};
-    font-weight: ${({theme}) => theme.typographies.p.fontWeight};
-    font-size: ${({theme}) => theme.typographies.p.fontSize};
+    width: 100%;
+
+    color: ${({ theme }) => theme.colors.textSecondary};
+    font-family: ${({ theme }) => theme.typographies.p.fontFamily};
+    font-weight: ${({ theme }) => theme.typographies.p.fontWeight};
+    font-size: ${({ theme }) => theme.typographies.p.fontSize};
     background: none;
-    border: 1px solid ${({theme}) => theme.colors.border};
-    border-radius: ${({theme}) => theme.borderRadius};
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    border-radius: ${({ theme }) => theme.borderRadius};
     outline: none;
-    box-shadow: ${({theme}) => theme.shadows.default};
+    box-shadow: ${({ theme }) => theme.shadows.default};
 
     transition: border-color 0.5s;
 
     &:focus {
-        border-color: ${({theme, isSuccess, isError}) => {
+        border-color: ${({ theme, isSuccess, isError }) => {
             if (isSuccess) {
                 return theme.colors.success;
             } else if (isError) {
